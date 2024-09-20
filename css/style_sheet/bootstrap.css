@@ -1,0 +1,20 @@
+body {
+    background-color:#ddd;
+}
+.header {
+    height: 40px;
+}
+.content {
+    min-height: 500px;
+}
+.sidebar {
+    overflow: scroll;
+}
+.main-content {
+    background-color: white;
+    min-height: 500px;
+    border: 1px solid #000;
+}
+.footer {
+    height:40px;
+}
