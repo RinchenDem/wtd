@@ -1,0 +1,36 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <button onclick="myfunction()">try it</button>
+        <p id="demo"></p>
+        <button onclick="promtBox()">try this too</button>
+        <p id="demo2"></p>
+
+    <script>
+        function myfunction() {
+            var txt;
+            if (confirm("press a button!")) {
+                txt = "you pressed OK";   
+            } else {
+                txt="you pressed cancel!";
+            }
+            document.getElementById("demo").innerHTML=txt;
+        }
+        function promtBox() {
+            let text;
+            let person = prompt("please enter your name:","Harry potter");
+            if (person == null || person == "") {
+                text = "user cancelled the prompt.";
+            } else {
+                text = "hello" + person + "! how are you today";
+            }
+            document.getElementById("demo2").innerHTML=text;
+        }
+    </script>    
+    </body>
+    </html>
