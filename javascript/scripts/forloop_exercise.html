@@ -1,0 +1,44 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container text-center p-5 mt-5 bg-warning"></div>
+            <h2 class="mb-5">Multiplication Table</h2>
+            <p>Click the button below to generate a multiplication table.</p>
+            <button class="btn border btn-outline-dark" onclick="multiply()">Click Me</button>
+            <h5 id= "heading" class="my-5"></h5>
+            <p id="p1" class="p-5 m-5 bg-dark text-light"></p>
+            <link rel="stylesheet" href="/html/bootstrap/css/forloop.css">
+        </div>
+    <script>
+        function multiply() {
+        let number = prompt("Enter a number for the multiplication table:");
+        let result = "";
+        
+        if (number === null || number === "") {
+            result = "You did not enter a number.";
+        } else {
+            number = parseInt(number);
+            if (isNaN(number)) {
+                result = "Invalid input. Please enter a valid number.";
+            } else {
+                for (let i = 1; i <= 10; i++) {
+                    result += `${number} x ${i} = ${number * i}<br>`;
+                }
+            }
+        }
+        
+        document.getElementById("p1").innerHTML = result;
+    }
+        
+
+        
+    </script>
+
+        
+    </body>
+    </html>
